@@ -6,7 +6,7 @@ import geopandas as gpd
 import pandas as pd
 
 #read shape file
-df_taiwan=gpd.read_file('20240402/county/county_moi_1090820.shp')
+df_taiwan=gpd.read_file(r'c:\Users\User\Desktop\新增資料夾 (2)\TOWN_MOI_1120825.shp')
 
 ##################################################
 ##################################################
@@ -67,4 +67,5 @@ for x, y, label in zip(geo_taiwan.geometry.centroid.x, geo_taiwan.geometry.centr
 
 for x, y, label in zip(geo_taiwan.geometry.centroid.x, geo_taiwan.geometry.centroid.y, geo_taiwan['max']):
     plt.text(x+ 0.2 , y, label, fontsize=8, ha='center')
+plt.title('11022201')
 plt.show()
